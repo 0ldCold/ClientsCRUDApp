@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://C:/ITwork/javafx-sdk-16/lib" />
+      <root url="jar://C:/ITwork/jbdcPostgreSQL/postgresql-42.2.20.jar!/" />
+      <root url="jar://C:/ITwork/tornadofx-controls-1.0.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://C:/ITwork/javafx-sdk-16/lib" />
+    </SOURCES>
+    <jarDirectory url="file://C:/ITwork/javafx-sdk-16/lib" recursive="false" />
+    <jarDirectory url="file://C:/ITwork/javafx-sdk-16/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
