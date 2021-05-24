@@ -61,6 +61,10 @@ public class MainController {
     TextField TextFieldSearchLogin;
     @FXML
     ComboBox ComboBoxSearchAccessLevel;
+    @FXML
+    Button ButtonDelete;
+    @FXML
+    Button ButtonModification;
 
     @FXML
     private void initialize(){
@@ -70,6 +74,9 @@ public class MainController {
         TableColumnAccessLvl.setCellValueFactory(cellData -> cellData.getValue().accessLvlProperty().asObject());
         TableColumnDateOfCreation.setCellValueFactory(cellData -> cellData.getValue().dateOfCreationProperty());
         TableColumnDateOfModification.setCellValueFactory(cellData -> cellData.getValue().dateOfModificationProperty());
+
+        ButtonDelete.setDisable(true);
+        ButtonModification.setDisable(true);
 
         //заполнение таблицы данными
         updateTableData();
@@ -109,8 +116,12 @@ public class MainController {
             }
         });
 
+        //хранение выбранной строки таблицы
         TableView.getSelectionModel().selectedItemProperty().addListener(actionEvent ->  {
             selectTableLine = TableView.getSelectionModel().getSelectedItem();
+            ButtonDelete.setDisable(selectTableLine == null);
+            ButtonModification.setDisable(selectTableLine == null);
+
         });
     }
 
